@@ -44,10 +44,16 @@
 	</dependencies>
 
 	<build>
+		<finalName>demo-app</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                    <image>
+                        <name>${project.artifactId}</name>
+                    </image>
+                </configuration>
 				<executions>
 					<execution>
 						<goals>
